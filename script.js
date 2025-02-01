@@ -24,7 +24,13 @@ function changeSize(input) {
   }
 }
 function colorSquare() {
-  this.style.backgroundColor = color;
+  if (color === "randomColor") {
+    this.style.backgroundColor = `#${Math.floor(
+      Math.random() * 16777215
+    ).toString(16)}`;
+  } else {
+    this.style.backgroundColor = color;
+  }
 }
 
 function changeColor(choice) {
