@@ -10,6 +10,7 @@
     <h1>ETCH-A-SKETCH</h1>
     <div class="container">
       <div class="title"><h1>SketchPad</h1></div>
+      <div class="mode">Mode</div>
       <div class="content">
         <div class="board"></div>
         <div class="buttons">
@@ -18,7 +19,7 @@
           <button onclick="changeColor('grey')">Grey</button>
           <button onclick="changeColor('blue')">Blue</button>
           <button onclick="changeColor('randomColor')">Random</button>
-          <button>Reset</button>
+          <button onclick="resetBoard()">Reset</button>
         </div>
         <div>
           <input
