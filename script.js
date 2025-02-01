@@ -20,9 +20,10 @@ populateBoard(16);
 
 function changeSize(input) {
   if (input >= 2 && input <= 100) {
+    document.querySelector(".error-message").style.display = "none";
     populateBoard(input);
   } else {
-    console.log("Error");
+    document.querySelector(".error-message").style.display = "flex";
   }
 }
 function colorSquare() {
@@ -47,6 +48,7 @@ function resetBoard() {
   squares.forEach((div) => (div.style.backgroundColor = "white"));
 }
 
+//The event listener here makes it possible to unclick when you want to stop coloring
 document.querySelector("body").addEventListener("click", (e) => {
   if (e.target.tagName != "BUTTON") {
     click = !click;
